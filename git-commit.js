@@ -45,9 +45,21 @@ rl.question("Enter your commit message: ", commitMessage => {
     });
   };
 
-  // Execute git add
-  executeCommand("git add .", "Files added successfully:")
+  // Step 1: Execute lint check
+  executeCommand("yarn lint:check", "Linting completed with output:")
+    .then(() => {
+      // Step 2: Execute prettier check
+      return executeCommand(
+        "yarn prettier:check",
+        "Prettier check completed with output:",
+      );
+    })
+    .then(() => {
+      // Step 3: Execute git add
+      return executeCommand("git add .", "Files added successfully:");
+    })
     .then(() =>
+      // Step 4: Execute git commit
       executeCommand(
         `git commit -m "${commitMessage}"`,
         "Commit message added:",
@@ -55,6 +67,7 @@ rl.question("Enter your commit message: ", commitMessage => {
     )
     .then(commitOutput => {
       console.log("Commit Output:", commitOutput);
+      // Step 5: Execute git push
       return executeCommand(
         "git push",
         "Push to remote repository successful:",
@@ -62,7 +75,8 @@ rl.question("Enter your commit message: ", commitMessage => {
       );
     })
     .then(() => {
-      // Run yarn start without prefixing "Server Output:"
+      // Step 6: Run yarn start
+      console.log("Starting the server...");
       const devProcess = exec("yarn start", (error, stdout, stderr) => {
         if (error) {
           console.error(`exec error: ${error}`);
@@ -74,6 +88,7 @@ rl.question("Enter your commit message: ", commitMessage => {
         console.log(`stdout: ${stdout}`);
       });
 
+      // Ensure to capture and log the output of `yarn start`
       devProcess.stdout.on("data", data => {
         process.stdout.write(data); // Directly output without prefix
       });
