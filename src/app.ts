@@ -3,6 +3,7 @@ import express, { NextFunction, Request, Response } from 'express';
 import cors from 'cors';
 import { Application } from 'express';
 import httpStatus from 'http-status';
+import allRoutes from './app/routes/index';
 import globalErrorHandler from './app/middlewares/globalErrorHandler';
 const app: Application = express();
 app.use(cors());
@@ -20,6 +21,7 @@ app.get('/', (req: Request, res: Response) => {
 
 // src/app.ts
 
+app.use('/api/v1/', allRoutes);
 app.use(globalErrorHandler);
 
 // Handle Route not found

@@ -1,20 +1,25 @@
 {
-  "keep": {
-    "days": true,
-    "amount": 14
-  },
-  "auditLog": "D:\\Practice\\fashion-glory\\practive-mysql\\logs\\winston\\error\\.9bd1559b2400e997c02bb91f1e0c4e0b7ea77772-audit.json",
-  "files": [
-    {
-      "date": 1743667352699,
-      "name": "D:\\Practice\\fashion-glory\\practive-mysql\\logs\\winston\\error\\error-2025-04-03-14.log",
-      "hash": "b40b4c06e5d041b0ceb5feff43d3b9b87a53f70b1f83d8cb514793c9567c4da5"
+    "keep": {
+        "days": true,
+        "amount": 14
     },
-    {
-      "date": 1743748494995,
-      "name": "D:\\Practice\\fashion-glory\\practive-mysql\\logs\\winston\\error\\error-2025-04-04-12.log",
-      "hash": "5bb254eef2724a2a9948b994d8598adeb87639b9dccafdfcb0b321c131d9b818"
-    }
-  ],
-  "hashType": "sha256"
+    "auditLog": "D:\\Practice\\fashion-glory\\practive-mysql\\logs\\winston\\error\\.9bd1559b2400e997c02bb91f1e0c4e0b7ea77772-audit.json",
+    "files": [
+        {
+            "date": 1743667352699,
+            "name": "D:\\Practice\\fashion-glory\\practive-mysql\\logs\\winston\\error\\error-2025-04-03-14.log",
+            "hash": "b40b4c06e5d041b0ceb5feff43d3b9b87a53f70b1f83d8cb514793c9567c4da5"
+        },
+        {
+            "date": 1743748494995,
+            "name": "D:\\Practice\\fashion-glory\\practive-mysql\\logs\\winston\\error\\error-2025-04-04-12.log",
+            "hash": "5bb254eef2724a2a9948b994d8598adeb87639b9dccafdfcb0b321c131d9b818"
+        },
+        {
+            "date": 1743750862858,
+            "name": "D:\\Practice\\fashion-glory\\practive-mysql\\logs\\winston\\error\\error-2025-04-04-13.log",
+            "hash": "62d8c27974d4e1686ff540ea144fc47037b8eb5a300f3849c8bc27e074f6ba89"
+        }
+    ],
+    "hashType": "sha256"
 }
