@@ -2,5 +2,11 @@
 import { defineConfig, globalIgnores } from "eslint/config";
 
 export default defineConfig([
-  globalIgnores([".eslintignore", "node_modules", "dist", ".env"]),
+  globalIgnores([
+    ".eslintignore",
+    "node_modules",
+    "dist",
+    ".env",
+    "git-commit.js",
+  ]),
 ]);
