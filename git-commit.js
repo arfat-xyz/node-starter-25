@@ -63,7 +63,16 @@ rl.question("Enter your commit message: ", commitMessage => {
     })
     .then(() => {
       // Run yarn start without prefixing "Server Output:"
-      const devProcess = exec("yarn start");
+      const devProcess = exec("yarn start", (error, stdout, stderr) => {
+        if (error) {
+          console.error(`exec error: ${error}`);
+          return;
+        }
+        if (stderr) {
+          console.error(`stderr: ${stderr}`);
+        }
+        console.log(`stdout: ${stdout}`);
+      });
 
       devProcess.stdout.on("data", data => {
         process.stdout.write(data); // Directly output without prefix
