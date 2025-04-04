@@ -1,12 +1,12 @@
 import httpStatus from "http-status";
-import { IProduct } from "./productInterface";
-import { ProductService } from "./productService";
 import { Request, Response } from "express";
 import catchAsync from "../../../shared/cacheAsync";
 import sendResponse from "../../../shared/sentResponse";
 import { productFilterableFields } from "./productConstant";
 import pick from "../../../shared/pick";
 import { paginationFields } from "../../../constants/pagination";
+import { IProduct } from "./productInterface";
+import { ProductService } from "./productService";
 
 const createProduct = catchAsync(async (req: Request, res: Response) => {
   const payload: IProduct = req.body;
