@@ -13,7 +13,7 @@ const rl = readline.createInterface({
 rl.question("Enter your commit message: ", commitMessage => {
   if (!commitMessage) {
     console.error("Error: Please provide a commit message.");
-    console.log('Usage: node push.js "Your commit message"');
+    console.log('Usage: node push.js "Your  commit message"');
     process.exit(1);
   }
 
