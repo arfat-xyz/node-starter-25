@@ -1,0 +1,1 @@
+2025-04-03T08:02:32.731Z 14:2:32 [Arfat Rahman] error: Failed to connect database MongoParseError: Invalid scheme, expected connection string to start with "mongodb://" or "mongodb+srv://"
