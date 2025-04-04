@@ -1,13 +1,13 @@
 export const productFilterableFields: string[] = [
-  'productName',
-  'category',
-  'description',
-  'keyFeatures',
-  'searchTerm',
+  "productName",
+  "category",
+  "description",
+  "keyFeatures",
+  "searchTerm",
 ];
 export const productSearchableFields: string[] = [
-  'productName',
-  'category',
-  'description',
-  'keyFeatures',
+  "productName",
+  "category",
+  "description",
+  "keyFeatures",
 ];

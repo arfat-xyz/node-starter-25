@@ -1,9 +1,9 @@
-import { SortOrder } from 'mongoose';
-import { IPaginationOptions } from '../../../interfaces/pagination';
-import { ProductModel } from './prodcutSchema';
-import { IProduct, IProductFilters } from './productInterface';
-import { productSearchableFields } from './productConstant';
-import { paginationHelpers } from '../../../helpers/paginationHelpers';
+import { SortOrder } from "mongoose";
+import { IPaginationOptions } from "../../../interfaces/pagination";
+import { ProductModel } from "./prodcutSchema";
+import { IProduct, IProductFilters } from "./productInterface";
+import { productSearchableFields } from "./productConstant";
+import { paginationHelpers } from "../../../helpers/paginationHelpers";
 
 const createProduct = async (payload: IProduct) => {
   const result = await ProductModel.create(payload);
@@ -27,7 +27,7 @@ const getAllProducts = async (
       $or: productSearchableFields.map(field => ({
         [field]: {
           $regex: searchTerm,
-          $options: 'i',
+          $options: "i",
         },
       })),
     });

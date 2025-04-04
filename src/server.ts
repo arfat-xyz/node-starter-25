@@ -1,12 +1,12 @@
-import mongoose from 'mongoose';
-import app from './app';
-import { config } from './config';
-import { Logger } from './shared/logger';
+import mongoose from "mongoose";
+import app from "./app";
+import { config } from "./config";
+import { Logger } from "./shared/logger";
 
 async function bootstrap() {
   try {
     await mongoose.connect(config.db_url as string);
-    Logger.logger.info('Db is connected');
+    Logger.logger.info("Db is connected");
     // console.log('Db is connected')
     app.listen(config.port, () => {
       Logger.logger.info(`Application listening on port ${config.port}`);

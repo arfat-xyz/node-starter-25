@@ -2,7 +2,7 @@ export default class ApiError extends Error {
   constructor(
     public statusCode: number,
     message: string | undefined,
-    stack = '',
+    stack = "",
   ) {
     super(message);
     this.statusCode = statusCode;

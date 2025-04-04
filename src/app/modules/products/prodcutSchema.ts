@@ -1,5 +1,5 @@
-import { Schema, model } from 'mongoose';
-import { IProdcutModel, IProduct, IReviews } from './productInterface';
+import { Schema, model } from "mongoose";
+import { IProdcutModel, IProduct, IReviews } from "./productInterface";
 const reviewsSchema = new Schema<IReviews>({
   comment: {
     type: String,
@@ -44,6 +44,6 @@ const productSchema = new Schema<IProduct, IProdcutModel>({
   reviews: [reviewsSchema],
 });
 export const ProductModel = model<IProduct, IProdcutModel>(
-  'Product',
+  "Product",
   productSchema,
 );

@@ -1,5 +1,5 @@
-import { CastError } from 'mongoose';
-import { IGenericErrorMessage } from '../interface/errors';
+import { CastError } from "mongoose";
+import { IGenericErrorMessage } from "../interface/errors";
 
 const handleCastError = (err: CastError) => {
   const errors: IGenericErrorMessage[] = [
@@ -12,7 +12,7 @@ const handleCastError = (err: CastError) => {
   return {
     statusCode,
     errorsMessages: errors,
-    message: 'Cast Error',
+    message: "Cast Error",
   };
 };
 export default handleCastError;

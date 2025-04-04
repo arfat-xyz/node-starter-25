@@ -1,4 +1,4 @@
-import { Response } from 'express';
+import { Response } from "express";
 type IApiResponse<T> = {
   statusCode: number;
   success: boolean;
