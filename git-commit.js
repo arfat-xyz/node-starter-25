@@ -62,8 +62,8 @@ rl.question("Enter your commit message: ", commitMessage => {
       );
     })
     .then(() => {
-      // Run npm run dev without prefixing "Server Output:"
-      const devProcess = exec("npm run dev");
+      // Run yarn start without prefixing "Server Output:"
+      const devProcess = exec("yarn start");
 
       devProcess.stdout.on("data", data => {
         process.stdout.write(data); // Directly output without prefix

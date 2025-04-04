@@ -4,12 +4,12 @@ import { ErrorRequestHandler } from "express";
 import mongoose, { CastError } from "mongoose";
 import { ZodError } from "zod";
 import { config } from "../../config";
-import { IGenericErrorMessage } from "../../interface/errors";
-import handleValidateError from "../../errors/handleValidateError";
 import ApiError from "../../errors/ApiError";
-import { Logger } from "../../shared/logger";
 import handleCastError from "../../errors/handleCastError";
+import handleValidateError from "../../errors/handleValidateError";
 import handleZodError from "../../errors/handleZodError";
+import { IGenericErrorMessage } from "../../interface/errors";
+import { Logger } from "../../shared/logger";
 
 // global error handling
 const globalErrorHandler: ErrorRequestHandler = (error, req, res, next) => {
@@ -23,7 +23,6 @@ const globalErrorHandler: ErrorRequestHandler = (error, req, res, next) => {
   let statusCode: number = 500;
   let message = "Something went wrong";
   let errorsMessages: IGenericErrorMessage[] = [];
-
   if (error?.name === "ValidationError") {
     const simplifiedError = handleValidateError(
       error as mongoose.Error.ValidationError,
