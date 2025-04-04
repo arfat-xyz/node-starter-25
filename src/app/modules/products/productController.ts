@@ -14,7 +14,7 @@ const createProduct = catchAsync(async (req: Request, res: Response) => {
   sendResponse<IProduct>(res, {
     statusCode: httpStatus.OK,
     success: true,
-    message: `Product created successfully.`,
+    message: `Product created successfully..`,
     data: result,
   });
 });
