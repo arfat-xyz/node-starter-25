@@ -1,20 +1,20 @@
 {
-    "keep": {
-        "days": true,
-        "amount": 14
+  "keep": {
+    "days": true,
+    "amount": 14
+  },
+  "auditLog": "D:\\Practice\\fashion-glory\\practive-mysql\\logs\\winston\\success\\.0142ffbf503fdd6ae617ade69b01183f476e33f4-audit.json",
+  "files": [
+    {
+      "date": 1743667352695,
+      "name": "D:\\Practice\\fashion-glory\\practive-mysql\\logs\\winston\\success\\success-2025-04-03-14.log",
+      "hash": "916c11608fc443952a94185e61010a14109ca71508b45395d776e7c78314790d"
     },
-    "auditLog": "D:\\Practice\\fashion-glory\\practive-mysql\\logs\\winston\\success\\.0142ffbf503fdd6ae617ade69b01183f476e33f4-audit.json",
-    "files": [
-        {
-            "date": 1743667352695,
-            "name": "D:\\Practice\\fashion-glory\\practive-mysql\\logs\\winston\\success\\success-2025-04-03-14.log",
-            "hash": "916c11608fc443952a94185e61010a14109ca71508b45395d776e7c78314790d"
-        },
-        {
-            "date": 1743748494985,
-            "name": "D:\\Practice\\fashion-glory\\practive-mysql\\logs\\winston\\success\\success-2025-04-04-12.log",
-            "hash": "4fddf482e3ecf8a563c61047942966b4696a209c2d530b4aed353423c8ece5f4"
-        }
-    ],
-    "hashType": "sha256"
+    {
+      "date": 1743748494985,
+      "name": "D:\\Practice\\fashion-glory\\practive-mysql\\logs\\winston\\success\\success-2025-04-04-12.log",
+      "hash": "4fddf482e3ecf8a563c61047942966b4696a209c2d530b4aed353423c8ece5f4"
+    }
+  ],
+  "hashType": "sha256"
 }
