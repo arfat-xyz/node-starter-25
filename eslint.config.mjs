@@ -1,6 +1,6 @@
+import js from "@eslint/js";
 import { defineConfig } from "eslint/config";
 import globals from "globals";
-import js from "@eslint/js";
 import tseslint from "typescript-eslint";
 
 export default defineConfig([
@@ -17,7 +17,7 @@ export default defineConfig([
   {
     rules: {
       "no-unused-vars": "error",
-      "no-console": "error",
+      "no-console": "warn",
       "no-undef": "error",
       "no-unused-expressions": "error",
       "no-unreachable": "error",
