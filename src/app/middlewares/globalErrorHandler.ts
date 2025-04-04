@@ -17,7 +17,8 @@ const globalErrorHandler: ErrorRequestHandler = (error, req, res, next) => {
 
   // eslint-disable-next-line @typescript-eslint/no-unused-expressions
   config.env === "development"
-    ? console.log("😀 GlobalErrorHandler", error)
+    ? // eslint-disable-next-line no-console
+      console.log("😀 GlobalErrorHandler", error)
     : Logger.errorLogger.error("😀 GlobalErrorHandler", error);
   let statusCode: number = 500;
   let message = "Something went wrong";
@@ -32,6 +33,7 @@ const globalErrorHandler: ErrorRequestHandler = (error, req, res, next) => {
     errorsMessages = simplifiedError.errorsMessages;
   } else if (error?.name === "CastError") {
     const simplifiedError = handleCastError(error as CastError);
+    // eslint-disable-next-line no-console
     console.log(simplifiedError);
     statusCode = simplifiedError.statusCode;
     message = simplifiedError.message;

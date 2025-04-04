@@ -5,6 +5,7 @@ import { Application } from "express";
 import httpStatus from "http-status";
 import allRoutes from "./app/routes/index";
 import globalErrorHandler from "./app/middlewares/globalErrorHandler";
+import { generatedId } from "./utils/generateUserId";
 const app: Application = express();
 app.use(cors());
 
@@ -15,8 +16,12 @@ app.use(
     extended: true,
   }),
 );
-app.get("/", (req: Request, res: Response) => {
-  res.send("Welcome to my Database");
+app.get("/", async (req: Request, res: Response) => {
+  const generateNewId = await generatedId();
+  res.send({
+    response: "Welcome to my Database",
+    generateNewId,
+  });
 });
 
 // src/app.ts
