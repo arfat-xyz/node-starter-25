@@ -1,9 +1,9 @@
 import { SortOrder } from "mongoose";
+import { paginationHelpers } from "../../../helpers/paginationHelpers";
 import { IPaginationOptions } from "../../../interfaces/pagination";
 import { ProductModel } from "./prodcutSchema";
-import { IProduct, IProductFilters } from "./productInterface";
 import { productSearchableFields } from "./productConstant";
-import { paginationHelpers } from "../../../helpers/paginationHelpers";
+import { IProduct, IProductFilters } from "./productInterface";
 
 const createProduct = async (payload: IProduct) => {
   const result = await ProductModel.create(payload);

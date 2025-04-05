@@ -1,10 +1,9 @@
 // app.ts
-import express, { NextFunction, Request, Response } from "express";
 import cors from "cors";
-import { Application } from "express";
+import express, { Application, NextFunction, Request, Response } from "express";
 import httpStatus from "http-status";
-import allRoutes from "./app/routes/index";
 import globalErrorHandler from "./app/middlewares/globalErrorHandler";
+import allRoutes from "./app/routes/index";
 import { generatedId } from "./utils/generateUserId";
 const app: Application = express();
 app.use(cors());

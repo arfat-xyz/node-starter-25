@@ -20,8 +20,8 @@
     "editor.formatOnSave": true
   },
   "editor.codeActionsOnSave": {
-    "source.organizeImports": "explicit",
-    "source.fixAll.eslint": "explicit"
+    "source.organizeImports": "always",
+    "source.fixAll.eslint": "always"
   },
   "terminal.integrated.fontSize": 16,
   "terminal.integrated.fontWeight": "normal",

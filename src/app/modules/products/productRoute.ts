@@ -1,7 +1,7 @@
 import { Router } from "express";
+import zodValidateRequest from "../../middlewares/zodValidateRequest";
 import { ProductController } from "./productController";
 import { productZodSchema } from "./productZodValidation";
-import zodValidateRequest from "../../middlewares/zodValidateRequest";
 
 const router = Router();
 

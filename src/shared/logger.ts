@@ -1,7 +1,7 @@
-import { createLogger, format, transports } from "winston";
-const { combine, timestamp, label, printf, prettyPrint } = format;
-import DailyRotateFile from "winston-daily-rotate-file";
 import path from "path";
+import { createLogger, format, transports } from "winston";
+import DailyRotateFile from "winston-daily-rotate-file";
+const { combine, timestamp, label, printf, prettyPrint } = format;
 
 const myFormat = printf(({ level, message, label, timestamp }) => {
   const date = new Date(timestamp as Date);
